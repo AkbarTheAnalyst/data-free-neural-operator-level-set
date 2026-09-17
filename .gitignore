@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Cached backward-characteristic integrations (regenerated automatically,
+# no scientific content -- see rv_family.py:_characteristics)
+*.npz
+
+# OS
+.DS_Store
+Thumbs.db
