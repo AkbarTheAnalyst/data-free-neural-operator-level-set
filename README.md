@@ -36,7 +36,8 @@ This repository contains:
 1. **A data-free operator** — a spacetime Fourier backbone emitting the entire
    trajectory in one pass, with the initial condition imposed by construction
    rather than by penalty, trained on
-   $\mathcal{L}_{\text{pde}} + w_{\text{eik}}\mathcal{L}_{\text{eik}}$.
+
+$$\mathcal{L}_{\text{pde}} + w_{\text{eik}}\,\mathcal{L}_{\text{eik}}$$
 
 2. **Supervised and hybrid baselines** under an identical architecture, family,
    optimisation budget and test set, quantifying what refusing labels costs.
