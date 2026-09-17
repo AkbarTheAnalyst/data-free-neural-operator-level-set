@@ -36,7 +36,7 @@ This repository contains:
 1. **A data-free operator** — a spacetime Fourier backbone emitting the entire
    trajectory in one pass, with the initial condition imposed by construction
    rather than by penalty, trained on
-   $\mathcal{L}_\text{pde} + w_\text{eik}\mathcal{L}_\text{eik}$.
+   $\mathcal{L}_{\text{pde}} + w_{\text{eik}}\mathcal{L}_{\text{eik}}$.
 
 2. **Supervised and hybrid baselines** under an identical architecture, family,
    optimisation budget and test set, quantifying what refusing labels costs.
@@ -57,8 +57,8 @@ This repository contains:
   $2.576 \pm 0.159\%$, a factor of $1.5$.
 - The two benchmarks rank the three arms differently, and the eikonal
   constraint accounts for it: the exact solution violates
-  $\lVert\nabla\phi\rVert = 1$ over $0.3\%$ of the domain under rotation and
-  $86.9\%$ under the vortex.
+  $\lVert\nabla\phi\rVert = 1$ over $0.3$% of the domain under rotation and
+  $86.9$% under the vortex.
 - Where the constraint is valid, the physics-trained operator conserves
   enclosed area $2.7$ times better than supervision on solution data, despite a
   larger field error — the two arms fail in different ways, not by different
