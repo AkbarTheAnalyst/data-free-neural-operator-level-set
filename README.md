@@ -94,23 +94,27 @@ throughout the operator literature.
 
 **RO — solid-body rotation, $30{,}000$ iterations**
 
-| Arm | Labels | rel. $L_2$ (%) | area error (%) |
-|---|---|---|---|
-| Data-free | $0$ | 3.804 ± 1.075 | **3.15 ± 0.49** |
-| Hybrid | $8$ | **1.599 ± 0.084** | 3.42 ± 0.28 |
-| Supervised | $16$ | 2.576 ± 0.159 | 8.61 ± 0.97 |
+| Arm | Labels | rel. $L_2$ (%) | area error (%) | drift (%) |
+|---|---|---|---|---|
+| Data-free | $0$ | 3.804 ± 1.075 | **3.15 ± 0.49** | 3.28 ± 0.47 |
+| Hybrid | $8$ | **1.599 ± 0.084** | 3.42 ± 0.28 | 3.54 ± 0.29 |
+| Supervised | $16$ | 2.576 ± 0.159 | 8.61 ± 0.97 | 8.91 ± 0.99 |
+| Exact solution | — | 0 | 0 | 0.82 |
 
 **RV — reversed vortex, $20{,}000$ iterations**
 
-| Arm | Labels | rel. $L_2$ (%) | area error (%) |
-|---|---|---|---|
-| Data-free | $0$ | 1.614 ± 0.067 | 3.57 ± 0.79 |
-| Hybrid | $8$ | 0.986 ± 0.081 | 2.73 ± 0.56 |
-| Supervised | $16$ | **0.369 ± 0.035** | **1.13 ± 0.10** |
+| Arm | Labels | rel. $L_2$ (%) | area error (%) | drift (%) |
+|---|---|---|---|---|
+| Data-free | $0$ | 1.614 ± 0.067 | 3.57 ± 0.79 | 3.68 ± 0.78 |
+| Hybrid | $8$ | 0.986 ± 0.081 | 2.73 ± 0.56 | 2.83 ± 0.60 |
+| Supervised | $16$ | **0.369 ± 0.035** | **1.13 ± 0.10** | **1.50 ± 0.13** |
+| Exact solution | — | 0 | 0 | 1.09 |
 
 The ordering is monotone in the label count on RV and is not on RO. Area error
 is measured against the reference field with identical counting on both sides,
-so its discretisation floor is zero by construction.
+so its discretisation floor is zero by construction. Drift is measured against
+the prediction's own initial area and requires no reference; the Exact solution
+rows give the discretisation floor for each benchmark.
 
 ---
 
