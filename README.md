@@ -322,8 +322,6 @@ arms sit within a few percent of their own means there.
   three-dimensional level-set physics-informed neural networks.
   arXiv:2608.08322.
 
-(Full reference list in [main_manuscript/references.bib](../main_manuscript/references.bib).)
-
 ---
 
 ## Citation
