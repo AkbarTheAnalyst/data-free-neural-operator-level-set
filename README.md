@@ -33,7 +33,7 @@ reference solution enters the objective at any point.
 
 This repository contains:
 
-1. **A data-free operator** — a spacetime Fourier backbone emitting the entire
+1. **A data-free operator**: spacetime Fourier backbone emitting the entire
    trajectory in one pass, with the initial condition imposed by construction
    rather than by penalty, trained on
 
@@ -43,7 +43,7 @@ $$\mathcal{L}_{\text{pde}} + w_{\text{eik}}\,\mathcal{L}_{\text{eik}}$$
    optimisation budget and test set, quantifying what refusing labels costs.
    These are baselines, not proposed methods.
 
-3. **Two benchmarks chosen at opposite ends of one axis** — how far the exact
+3. **Two benchmarks chosen at opposite ends of one axis**: how far the exact
    solution departs from a signed-distance function — since that is what
    determines whether the geometric constraint helps.
 
@@ -53,7 +53,7 @@ $$\mathcal{L}_{\text{pde}} + w_{\text{eik}}\,\mathcal{L}_{\text{eik}}$$
 **Key findings:**
 - Training without any reference solution reaches $1.614 \pm 0.067\%$ relative
   $L_2$ on 100 held-out interfaces for the reversed vortex, against
-  $0.369 \pm 0.035\%$ for the supervised baseline — a factor of $4.4$. On
+  $0.369 \pm 0.035\%$ for the supervised baseline, a factor of $4.4$. On
   solid-body rotation the same comparison is $3.804 \pm 1.075\%$ against
   $2.576 \pm 0.159\%$, a factor of $1.5$.
 - The two benchmarks rank the three arms differently, and the eikonal
@@ -62,7 +62,7 @@ $$\mathcal{L}_{\text{pde}} + w_{\text{eik}}\,\mathcal{L}_{\text{eik}}$$
   $86.9$% under the vortex.
 - Where the constraint is valid, the physics-trained operator conserves
   enclosed area $2.7$ times better than supervision on solution data, despite a
-  larger field error — the two arms fail in different ways, not by different
+  larger field error; the two arms fail in different ways, not by different
   amounts.
 - On the same benchmark, eight reference solutions combined with the residual
   outperform sixteen without it. The ordering is not monotone in the label
@@ -70,7 +70,7 @@ $$\mathcal{L}_{\text{pde}} + w_{\text{eik}}\,\mathcal{L}_{\text{eik}}$$
 - SAW's weight seeding assumes a soft initial condition. Under a structural one
   the field begins at an exact distance function, the ratio is uninformative at
   the first iteration, and seeding the moving average at zero rather than at
-  that ratio is sufficient — the gate, quantile, ratio and clamp are unchanged.
+  that ratio is sufficient; the gate, quantile, ratio and clamp are unchanged.
 - Rotation required $30{,}000$ Adam iterations where the vortex converged by
   $20{,}000$. The difference tracks the eikonal weight, which stays active on
   one benchmark and is suppressed to $O(10^{-4})$ on the other.
